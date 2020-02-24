@@ -1,0 +1,219 @@
+/* Variables */
+
+:root {
+  --primary-color: #0f4c75;
+  --secondary-color: #3282b8;
+  --prices-direction: column;
+  --videosection-direction: column;
+  --justify-content-video-section: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Layout */
+#container {
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+header img {
+  height: 20px;
+  width: 20px;
+}
+
+#nav-bar {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 3px 10px #888;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#video-section {
+  display: flex;
+  flex-direction: var(--videosection-direction);
+  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#description {
+  padding: 20px 10px 10px 10px;
+  margin: 80px 10px 20px 10px;
+}
+
+#description h1 {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 5px;
+}
+
+.box-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+  padding: center;
+}
+
+.box-benefits h1 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.box-benefits p {
+  text-align: center;
+  color: #444;
+}
+
+#prices {
+  display: flex;
+  flex-direction: var(--prices-direction);
+  flex: 1;
+
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border: solid 1px #ccc;
+  margin: 10px;
+  background-color: var(--gray01);
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.box h2 {
+  padding: 10px;
+  color: #444;
+}
+
+.box p {
+  text-align: justify;
+  padding: 20px 10px;
+  color: #444;
+}
+
+.box h3 {
+  color: var(--secondary-color);
+  padding: 10px;
+}
+
+#form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 60px;
+  color: #444;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  background: #f4f4f4;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 5px;
+  color: #444;
+}
+
+footer section {
+  margin-bottom: 10px;
+}
+
+a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+a.nav-link:hover {
+  background-color: var(--primary-color);
+}
+
+form input[type="email"] {
+  border-radius: 3px;
+  border: solid 1px gray;
+  width: 300px;
+  margin: 15px 0;
+  font-size: 14px;
+  padding: 7px;
+}
+
+form input[type="submit"] {
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  padding: 7px 10px;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --prices-direction: row;
+  }
+}
